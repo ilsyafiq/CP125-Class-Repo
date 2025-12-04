@@ -1,4 +1,4 @@
-student_name = "Syafiq"
+student_name = "capik"
 student_id = "MC2515113645"
 course_code = "CP125"
 
