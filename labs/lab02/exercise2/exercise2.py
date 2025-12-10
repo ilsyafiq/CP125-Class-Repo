@@ -4,9 +4,11 @@
 import math
 
 def calculate_event_cost(participants, tent_capacity, tent_price, meal_price):
-    # TODO: Implement this function
-    # Calculate total cost for tents and meals
-    pass
+    total_tent_cost = math.ceil((participants / tent_capacity)) * tent_price
+    total_meal_price = participants * meal_price
+    total_budget = total_tent_cost + total_meal_price
+    return total_budget
 
 # Test your code here
 print("Testing Camping Logistics...")
+
