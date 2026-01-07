@@ -7,7 +7,7 @@ def find_score_range(scores):
         score = scores[i]
         if score > highest:
             highest = score
-        if score < highest:
+        elif score < lowest:
             lowest = score
     
     return (highest, lowest)

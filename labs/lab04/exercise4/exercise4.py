@@ -1,7 +1,18 @@
+import math
+
+def calc_average(lap_times_half):
+    return sum(lap_times_half) / len(lap_times_half)
 
 def analyze_performance(lap_times):
-  
-    pass
+    divider = math.ceil(len(lap_times)/2)
+    first_half = lap_times[:divider]
+    second_half = lap_times[divider:]
+
+    if calc_average(second_half) > calc_average(first_half):
+        return True
+    else:
+        return False
+
 
 
 # Test
