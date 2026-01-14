@@ -1,13 +1,11 @@
-
 def was_backward_detected(waypoints):
-    """
-    Return True if drone moved backward in x or y, False otherwise.
-    Use tuple unpacking.
-    """
-    pass
-
+    for i in range (1, len(waypoints)):
+        if waypoints[i][0] < waypoints[i-1][0] or waypoints[i][1] < waypoints[i-1][0]:
+            return True
+        
+    return False
 
 # Test
-path = ((0, 0, 10), (5, 5, 12), (4, 6, 10), (10, 10, 15))
+path = ((0, 0, 0), (1, 2, 3), (2, 4, 6))
 result = was_backward_detected(path)
 print(f"Backward Movement: {result}")  # Expected: True
