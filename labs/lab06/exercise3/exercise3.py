@@ -1,2 +1,6 @@
 def audit_blocklists(list_a, list_b, list_c):
-    pass
+    universal = list_a & list_b & list_c
+    redundant = (list_a & list_b) | (list_b & list_c) | (list_c & list_a)
+    unique_list_A = list_a - (list_b | list_c)
+
+    return universal, redundant, unique_list_A
