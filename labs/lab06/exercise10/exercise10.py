@@ -1,5 +1,5 @@
 def get_unique_attendees(attendance_logs):
-    attendee_id = set{}
+    attendee_id = set()
     for log in attendance_logs:
         attendee_id.add(log[0])
     return attendee_id
