@@ -6,7 +6,8 @@ def get_unique_attendees(attendance_logs):
 
 def count_unique_events(attendance_logs, attendee_id):
     for attendee in attendee_id:
-        if attendee_id
+        if attendee_id:
+            pass
 
 def filter_by_threshold(attendees, attendance_logs, min_events):
     """Return sorted list of attendees who attended >= min_events."""
