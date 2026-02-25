@@ -1,6 +1,13 @@
 def process_actions(catalog, actions):
-    # TODO: Your code here
-    pass
+    for action in actions:
+        if action[0] == "BORROW":
+            if action[1] in catalog and catalog[action[1]] > 0:
+                catalog[action[1]] -= 1
+        elif action[0] == "RETURN":
+            if action[1] in catalog:
+                catalog[action[1]] += 1
+        
+    return catalog
 
 
 
