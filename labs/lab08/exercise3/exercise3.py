@@ -1,21 +1,23 @@
 # Lab 08 Exercise 3: Product Price Lookup
 # Write your code below:
-
+import csv
 def calculate_order_total(products_file, order_file, output_file):
-    """
-    Calculate total cost for each product in order.
+    f = open(products_file, 'r')
+    g = open(order_file, 'r')
+    output = open(output_file, "w")
 
-    Args:
-        products_file: path to products CSV (product_id,product_name,price)
-        order_file: path to order CSV (product_id,quantity)
-        output_file: path to output CSV file
+    product_reader = csv.reader(f)
 
-    Returns:
-        float: grand total of all orders
-    """
-    # TODO: Implement this function
-    pass
+    order_reader = csv.reader(g)
 
+
+
+
+
+    f.close()
+    g.close()
+    output.close()
+    return
 
 # Test your code here
 result = calculate_order_total("data/products.csv", "data/order.csv", "data/total.csv")
