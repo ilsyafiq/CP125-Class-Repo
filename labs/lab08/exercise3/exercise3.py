@@ -7,7 +7,7 @@ def calculate_order_total(products_file, order_file, output_file):
     output = open(output_file, "w")
 
     product_reader = csv.reader(f)
-
+    
     order_reader = csv.reader(g)
 
 
