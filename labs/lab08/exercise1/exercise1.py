@@ -3,23 +3,23 @@
 
 def filter_passing_scores(input_file, output_file):
     f = open(input_file, 'r')
-    h = open(output_file, "w")
-
-    individual_scores = f.readlines()
-    student_dict = {}
-    for student_result in individual_scores:
-        splitted = student_result.split()
-        student_dict[splitted[0]] = splitted[1]
+    g = open(output_file, "w")
+    scores = list(f.readlines())
+    student_scores = {}
+    for i in range(0, len(scores), 2):
+        student_scores[scores[i].strip()] = scores[i + 1].strip()
     
-    result = 0
-    for student in student_dict:
-        if int(student_dict[student]) >= 80:
-            h.write(f"{student} {student_dict[student]}\n")
-            result += 1
-            
+    count = 0
+    for student in student_scores:
+        if float(student_scores[student]) >= 80:
+            g.write(f"{student} {student_scores[student]}\n")
+            count += 1
+
+    print(student_scores)
+
     f.close()
-    h.close()
-    return result
+    g.close()
+    return count
 
 # Test your code here
 result = filter_passing_scores("labs/lab08/exercise1/data/scores.txt", "labs/lab08/exercise1/data/passing.txt")
