@@ -14,28 +14,4 @@ def show_math_trend(filename):
 
     return len(df)
 
-'''
-Background:
-
-Show how Math scores vary across all students using a line chart.
-
-Task:
-
-Write a function show_math_trend(filename) that:
-
-Loads CSV
-Extracts Math column
-Creates line chart:
-x-axis = student index (df.index)
-y-axis = Math scores
-xlabel = "Student Index"
-ylabel = "Math Score"
-title = "Math Score Trends"
-Calls plt.show()
-Returns number of students (for testing)
-
-example
-count = show_math_trend("data/students.csv")
-# Chart window appears showing Math scores
-print(count)  # 25
-'''
+show_math_trend('labs/lab09/data/students.csv')

@@ -14,7 +14,8 @@ def compare_averages(filename):
     dict_averages["best_subject"] = max(subject_averages, key=subject_averages.get)
     dict_averages["worst_subject"] = min(subject_averages, key=subject_averages.get)
 
-
+    print(subject_averages)
     print(dict_averages)
+    return dict_averages
 
 compare_averages("labs/lab09/data/students.csv")
